@@ -299,9 +299,9 @@ button:focus,
   margin: 0;
 }
 
-.contact a {
+/* .contact a {
   margin: -10px;
-}
+} */
 
 .contact__header {
   display: flex;
