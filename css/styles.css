@@ -10,17 +10,17 @@ Secondary colors:
 */
 
 :root {
-  --primary-color: #dfd4bf;
-  --secondary-color-1: #445645;
-  --secondary-color-2: #6c4a3d;
-  --secondary-color-3: #286288;
-  --text-color: #002835;
+  --primary-color: #313977;
+  --secondary-color-1: #21ffe2;
+  --secondary-color-2: #f34335;
+  --secondary-color-3: #000b38;
+  --text-color: #fff;
   --dark-grey: #2b2b2b;
 }
 
 body {
   background-color: var(--primary-color);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Catamaran', sans-serif;
   font-weight: 400;
   font-size: 16px;
 
@@ -48,7 +48,7 @@ h3 {
 }
 
 a {
-  color: var(--text-color);
+  color: var(--secondary-color-3);
 }
 
 a:visited {
@@ -59,6 +59,7 @@ a:visited {
 #button-cv {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 }
 
 a:hover,
@@ -78,13 +79,11 @@ button,
   border: none;
   display: inline-block;
 
-  /* takes the font from the outer container */
-  font-family: inherit;
-
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var(--secondary-color-1);
-  color: whitesmoke;
+  background-color: var(--secondary-color-3);
+  color: rgb(232, 222, 153);
   text-decoration: none;
+  font-size: 20px;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.4);
@@ -102,10 +101,15 @@ button:focus,
   opacity: 0.8;
 }
 
-.button_secondary {
+/* .button_secondary {
   background-color: var(--secondary-color-3);
   color: rgb(232, 222, 153);
 }
+
+.button_tertiary {
+  background-color: var(--secondary-color-2);
+  color: var(--primary-color);
+} */
 
 .navigation-list__item--active {
   text-decoration: none;
@@ -129,14 +133,21 @@ button:focus,
 
 .profile__portrait {
   width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
+  margin-right: 100px;
 }
 
 .profile {
   display: flex;
   max-width: 700px;
   margin: 0 auto;
+}
+
+.profile-background {
+  background-color: var(--secondary-color-1);
+  box-shadow: 0 0 75px 25px var(--secondary-color-2);
+  border: 4px groove var(--primary-color);
+
+  /* padding: 50px; */
 }
 
 .profile__text-container {
@@ -148,12 +159,13 @@ button:focus,
 
 .profile__text {
   margin: 8px;
+  color: var(--primary-color);
 }
 
 .profile__buttons {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-around;
+  /* align-items: flex-end; */
   margin-top: 20px;
 }
 
@@ -162,15 +174,43 @@ button:focus,
   margin: 0 auto;
 }
 
+.page-footer__about {
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  margin-top: -60px;
+}
+
 .about-heading {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  color: var(--secondary-color-2);
+}
+
+.about-subheading {
+  color: var(--secondary-color-1);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-subheading__item {
+  margin: 5px;
+}
+
+.about-background {
+  background-color: var(--secondary-color-1);
+  box-shadow: 0 0 125px 75px var(--secondary-color-2);
+  border: 4px groove var(--primary-color);
 }
 
 .about-text {
   margin: 0 auto;
   max-width: 800px;
+  color: var(--secondary-color-3);
 }
 
 .work-heading {
@@ -185,16 +225,22 @@ button:focus,
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: 5px;
 }
 
-.page-header__item {
+/* .page-header__item {
   flex: 0 1 200px;
-}
+} */
 
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
+}
+
+.cade-logo {
+  margin-left: -100px;
+  margin-top: -70px;
+  margin-bottom: -120px;
 }
 
 .grid {
@@ -204,7 +250,10 @@ button:focus,
 }
 
 .grid__item {
-  background-color: lightgray;
+  color: var(--secondary-color-3);
+  background-color: var(--secondary-color-1);
+  box-shadow: 0 0 45px 15px var(--secondary-color-2);
+  border: 4px groove var(--primary-color);
 }
 
 .grid__item:last-child {
@@ -230,7 +279,7 @@ button:focus,
   }
 
   .grid__item {
-    background-color: lightgray;
+    background-color: var(--secondary-color-1);
     width: auto;
     min-height: auto;
     margin: 0;
@@ -242,18 +291,32 @@ button:focus,
   }
 }
 
+.contact-background {
+  background-color: var(--secondary-color-1);
+  box-shadow: 0 0 75px 25px var(--secondary-color-2);
+  border: 4px groove var(--primary-color);
+  padding-bottom: 30px;
+  margin-bottom: -10px;
+}
+
 .contact {
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: var(--secondary-color-3);
 }
 
 .contact p {
-  margin: 5px;
+  margin: 0;
 }
 
 .contact a {
   margin: -10px;
+}
+
+.contact__header {
+  display: flex;
+  justify-content: center;
 }
 
 #contact-form {
@@ -263,9 +326,23 @@ button:focus,
   margin-top: 20px;
 }
 
+.standard-label {
+  color: var(--secondary-color-2);
+
+}
+
 .table-container {
   display: flex;
   justify-content: center;
+}
+
+th {
+  text-align: left;
+  color: var(--secondary-color-3);
+}
+
+tr {
+  color: var(--secondary-color-1);
 }
 
 .vegas-image {
@@ -297,43 +374,43 @@ button:focus,
 
 @keyframes color-change-1 {
   0% {
-    fill: rgb(102, 22, 145);
+    fill: var(--secondary-color-3);
   }
 
   50% {
-    fill: rgb(26, 207, 227);
+    fill: var(--secondary-color-1);
   }
 
   100% {
-    fill: rgb(234, 44, 199);
+    fill: var(--secondary-color-2);
   }
 }
 
 @keyframes color-change-2 {
   0% {
-    fill: rgb(234, 44, 199);
+    fill: var(--secondary-color-1);
   }
 
   50% {
-    fill: rgb(102, 22, 145);
+    fill: var(--secondary-color-2);
   }
 
   100% {
-    fill: rgb(26, 207, 227);
+    fill: var(--secondary-color-3);
   }
 }
 
 @keyframes color-change-3 {
   0% {
-    fill: rgb(26, 207, 227);
+    fill: var(--secondary-color-2);
   }
 
   50% {
-    fill: rgb(102, 22, 145);
+    fill: var(--secondary-color-3);
   }
 
   100% {
-    fill: rgb(26, 207, 227);
+    fill: var(--secondary-color-1);
   }
 }
 
@@ -400,4 +477,8 @@ button:focus,
   h1 {
     font-size: 22px;
   }
+}
+
+.work-heading {
+  color: var(--secondary-color-2);
 }

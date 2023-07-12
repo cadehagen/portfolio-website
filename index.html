@@ -10,13 +10,12 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/CSS" href="css/styles.css">
-
 </head>
 <body>
 <header class="page-header">
-    <img src="img/maze.jpg" alt="logo" class="page-header__item">
+    <img src="img/cade-logo.png" alt="logo" class="page-header__item cade-logo">
     <nav class="main-navigation page-header__item">
         <ul role="menubar" class="navigation-list">
             <li role="presentation">
@@ -33,27 +32,39 @@
             </li>
         </ul>
     </nav>
-</header>   
+</header>
+
+<!-- main profile content -->
+
+<div class="profile-background"> 
  <div class="profile">
-    <img src="img/headshot.jpeg" class="profile__portrait" alt="A photograph of me">
     <div class="profile__text-container">
-        <h1 class="profile__text">Hello World!</h1>
+        <h1 class="profile__text">Hey there!</h1>
     <p class="profile__text">
         My name is Cade Hagen. 
     </p>
     <p class="profile__text">
-        I am a <span>web</span> developer from Las Vegas.
+        I am a <span style="font-family: 'Courier New', Courier, monospace;" >&ltweb&gt</span> developer, writer, and guitarist from Las Vegas.
     </p>
-    <a href="#" class="profile__text">Check out some of my code</a>
+    <div class="profile__buttons">
+        <button type="button"><span style="font-family: 'Courier New', Courier, monospace; font-size: 20px;" >&ltcode&gt</span></button>  
+        <button class="button_secondary"><span style="font-family: 'Allura', cursive; font-size: 20px;">Writing</span></button>
+        <button class="button_tertiary">Music</button>
+     </div>
     </div>
+    <img src="img/headshot.jpeg" class="profile__portrait" alt="A photograph of me">
  </div> 
- <div class="profile__buttons">
-    <a href="#">Default Link</a>
-    <button type="button">Button</button>  
-    <button class="button_secondary">Another Button</button>
- </div>
+</div>  
+ <!-- <div class="profile__buttons">
+    <button type="button"><span style="font-family: 'Courier New', Courier, monospace; font-size: 20px;" >&ltcode&gt</span></button>  
+    <button class="button_secondary"><span style="font-family: 'Allura', cursive; font-size: 20px;">Writing</span></button>
+    <button class="button_tertiary"><span style="font-size: 20px;">Music</span></button>
+ </div> -->
+
+ <!-- footer content -->
+
  <footer class="page-footer">
-    <p>Find me on:</p>
+    <p style="color: white;">Find me on:</p>
     <div class="social-media">
         <img src="img/github.svg" alt="Github logo">
         <img src="img/twitter.svg" alt="Twitter logo">
