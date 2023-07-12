@@ -165,7 +165,6 @@ button:focus,
 .profile__buttons {
   display: flex;
   justify-content: space-around;
-  /* align-items: flex-end; */
   margin-top: 20px;
 }
 
@@ -328,7 +327,6 @@ button:focus,
 
 .standard-label {
   color: var(--secondary-color-2);
-
 }
 
 .table-container {
